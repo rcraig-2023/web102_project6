@@ -1,0 +1,178 @@
+.App {
+  padding: 20px;
+  font-family: sans-serif;
+  max-width: 1200px; /* Max width for larger screens */
+  margin: 0 auto; /* Center the app */
+  background-color: #f4f7f6; /* Light background for the page */
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+h1 {
+    color: #0b2f4c; /* Cooper Hewitt-ish blue */
+}
+
+.summary-stats {
+  border: 1px solid #dce3e1;
+  padding: 15px 25px;
+  margin-bottom: 30px;
+  background-color: #ffffff; /* White background for stats */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.summary-stats h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  color: #0b2f4c;
+  text-align: left;
+}
+
+.summary-stats p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.controls {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff; /* White background for controls */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 20px; /* Add space between controls */
+  flex-wrap: wrap; /* Allow controls to wrap on smaller screens */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center controls */
+}
+
+.controls input[type="text"],
+.controls input[type="number"],
+.controls select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.controls input[type="text"] {
+    min-width: 200px; /* Give search bar some width */
+}
+
+
+.controls label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between label text and input */
+    color: #333;
+}
+
+.controls input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* --- Styles for Previous Card Layout (Now Commented Out/Removed) --- */
+/*
+.artwork-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.artwork-item {
+  border: 1px solid #dce3e1;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.artwork-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.artwork-item h3 { margin-top: 0; margin-bottom: 10px; font-size: 1.05em; min-height: 3.5em; color: #222; }
+.artwork-item img { max-width: 100%; height: 180px; object-fit: contain; margin-bottom: 15px; background-color: #f0f0f0; border-radius: 4px;}
+.artwork-item p { font-size: 0.9em; color: #666; margin: 5px 0; }
+.artwork-item p em { color: #888; }
+*/
+/* --- End of Previous Card Layout Styles --- */
+
+
+/* --- New Table Styles --- */
+.table-container {
+  overflow-x: auto; /* Allows horizontal scrolling on small screens */
+  margin-top: 20px;
+  background-color: #fff; /* White background for the table area */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 5px; /* Add slight padding around the table */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove double borders */
+  font-size: 0.95em; /* Slightly smaller font for table */
+}
+
+th, td {
+  border: 1px solid #dce3e1; /* Light grey borders */
+  padding: 10px 12px; /* Padding inside cells */
+  text-align: left; /* Align text to the left */
+  vertical-align: top; /* Align content to the top of the cell */
+  word-wrap: break-word; /* Allow long words to break */
+}
+
+th {
+  background-color: #f0f4f8; /* Light background for headers */
+  font-weight: 600; /* Make headers bold */
+  color: #333;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9fb; /* Subtle striping for rows */
+}
+
+tbody tr:hover {
+  background-color: #eef2f5; /* Highlight row on hover */
+}
+
+td a {
+    color: #007bff; /* Standard link blue */
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+/* --- End of New Table Styles --- */
+
+
+/* Loading and Error styles */
+.loading-message,
+.error-message,
+.no-results-message {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.error-message {
+    color: #d9534f; /* Bootstrap danger color */
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    padding: 15px;
+}
